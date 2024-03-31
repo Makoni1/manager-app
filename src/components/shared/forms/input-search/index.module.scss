@@ -1,0 +1,25 @@
+@import "../../../../assets/styles/var";
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+.icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input {
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  box-shadow: 0 4px 16px 0 rgba(16, 18, 28, 0.04);
+  padding: 14px 16px 14px 44px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  &::placeholder {
+    color: $dark-gray;
+  }
+}

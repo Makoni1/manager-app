@@ -1,0 +1,64 @@
+@import "../../../assets/styles/var";
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.transportType {
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 139.023%; /* 22.244px */
+
+  &_editable {
+    flex: 1;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: $almost-black;
+    &:last-child {
+      border-right: 0;
+    }
+    &:hover svg {
+      fill: $brand;
+    }
+  }
+
+  &_selected {
+    //outline: 2px solid $light-accent;
+    border-radius: 12px;
+    border: 2px solid $light-accent !important;
+    background: $white;
+    box-shadow: 0 0 0 4px rgba(229, 143, 180, 0.27);
+    margin-top: -3px;
+    margin-bottom: -3px;
+    svg {
+      fill: $brand;
+    }
+  }
+
+  svg {
+    margin-bottom: 10px;
+  }
+
+  &_tagView {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 54px;
+    background-color: $white;
+    color: $black;
+    svg {
+      margin-bottom: 0;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../assets/styles/var";
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  align-items: center;
+  justify-content: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 44px;
+
+  &_green {
+    color: $white;
+    background-color: $green;
+  }
+
+  &_gray {
+    color: $black;
+    background-color: $gray;
+  }
+  &_blue {
+    color: $white;
+    background-color: $blue;
+  }
+  &_yellow {
+    color: $black;
+    background-color: $yellow;
+  }
+  &_brand {
+    color: $white;
+    background-color: $brand;
+  }
+}

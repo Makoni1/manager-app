@@ -1,0 +1,178 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.notificationCard {
+  padding: 27px 24px 27px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  border: 1.6px solid $gray;
+  background: $white;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  @include forTabletSmallView {
+    display: grid;
+    grid-template-areas: 'content time';
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: flex-start;
+    overflow: hidden;
+    @include forTabletSmallView {
+      white-space: nowrap;
+      grid-area: content;
+      width: auto;
+    }
+  }
+
+  &_destination {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 45px;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    @include forTabletSmallView {
+      margin: 0 0 0 42px;
+    }
+  }
+
+  &_time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include forTabletSmallView {
+      justify-content: unset;
+      grid-area: time;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: right;
+    }
+  }
+}
+
+.content {
+  &_img {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_title {
+    color: $black-title;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @include forTabletSmallView {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+  }
+}
+
+.time {
+  &_img {
+    margin-right: 6px;
+    @include forTabletSmallView {
+      display: none;
+
+    }
+  }
+
+  &_text {
+    color: $gray-title;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.destination {
+  &_city {
+    color: $black-title;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 6px;
+    @include forTabletSmallView {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $black-title;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 8px 10px;
+    border-radius: 44px;
+    background: $blue;
+    color: $white;
+    @include forTabletView {
+      display: none;
+    }
+  }
+}
+
+.writer {
+  color: $black-title;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 6px;
+  white-space: nowrap;
+  @include forTabletSmallView {
+    color: $black-title;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.comment {
+  color: $black-title;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include forTabletSmallView {
+    color: $black-title;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+

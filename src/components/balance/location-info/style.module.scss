@@ -1,0 +1,36 @@
+@import "../../../assets/styles/var";
+
+.wrapper {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $almost-white;
+  display: flex;
+  align-items: center;
+}
+.content {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  color: $black;
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  a {
+    color: $dark-gray;
+    font-size: 15px;
+    line-height: normal;
+  }
+  p {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

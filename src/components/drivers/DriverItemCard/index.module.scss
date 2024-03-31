@@ -1,0 +1,46 @@
+@import "../../../assets/styles/var";
+
+.wrapper {
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr) .4fr;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background: $white;
+  box-shadow: 0px 3px 20px 0px rgba(46, 47, 54, 0.12);
+  &.isHead {
+    box-shadow: none;
+    border: 0;
+    background-color: transparent;
+    margin-bottom: 0;
+    div {
+      color: $dark-gray;
+    }
+  }
+}
+
+.item {
+  color: $black;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.2%; /* 20.512px */
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  p {
+    margin-bottom: 0;
+  }
+  &_avatar {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &_status {
+    justify-content: flex-end;
+  }
+}

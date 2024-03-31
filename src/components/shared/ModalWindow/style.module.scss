@@ -1,0 +1,77 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F7F7F8;
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    text-align: center;
+    padding: 50px 16px;
+}
+.overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 0;
+}
+.content {
+    width: 100%;
+    //margin-top: 50px;
+    max-width: 600px;
+    background-color: $white;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+    @include forMobileView {
+        max-width: 96% !important;
+        padding: 26px 12px;
+    }
+    &_middle {
+        padding: 32px;
+        @include forMobileView {
+            padding: 26px 12px;
+        }
+    }
+    &_p_none {
+        padding: 0 !important;
+    }
+}
+.btn_close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 450;
+    &_bg {
+        padding: 14px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 0 4px 27px 0 rgba(0, 0, 0, 0.10);
+    }
+}
+.bgTrans {
+    background-color: rgba(0, 0, 0, 0.60);
+}
+.content_full {
+    height: 100%;
+}
+.footer {
+    margin-top: auto;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}

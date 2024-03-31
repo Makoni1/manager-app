@@ -1,0 +1,141 @@
+@import "../../../../assets/styles/var";
+.CustomDatePicker-wrapper {
+  position: relative;
+
+  &__border {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1.6px solid $light-gray;
+    //background: $almost-white;
+  }
+
+  &__bgGray {
+    background-color: $almost-white;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 1;
+    &_selected svg {
+      &[fill="none"] {
+        stroke: #141516;
+      }
+    }
+  }
+
+  &__withIcon {
+    padding-left: 44px;
+  }
+
+  .react-datepicker {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 12px;
+    border: 1.6px solid $light-gray;
+    background-color: $white;
+    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.12);
+    font-family: Inter;
+    &-popper {
+      z-index: 500;
+    }
+    &__input-container > input {
+      box-shadow: none;
+      padding: 0;
+      font-size: 16px;
+      background-color: transparent;
+    }
+    &__header {
+      background-color: $white;
+      border: 0;
+      padding: 0;
+    }
+    &__current-month {
+      color: $black;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+      padding: 20px 0;
+      text-transform: capitalize;
+    }
+    &__day-names {
+      border-top: 1px solid $light-gray;
+      padding-top: 20px;
+      margin-bottom: 25px;
+    }
+    &__day-name {
+      color: $dark-gray;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &__day, &__day-name {
+      margin: 0;
+      min-width: 44px;
+      width: 44px;
+      line-height: unset;
+    }
+    &__day {
+      color: $black;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+      height: 30px;
+      border-radius: 12px;
+      border: 1.6px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--outside-month {
+        color: $gray;
+        pointer-events: none;
+      }
+      &--today {
+        border-color: $light-gray;
+      }
+      &--keyboard-selected, &--selected {
+        background-color: $brand;
+        border-color: $brand;
+        color: #fff;
+      }
+      &--disabled {
+        color: $gray;
+      }
+    }
+    &__navigation {
+      width: 20px;
+      height: 20px;
+      top: 22px;
+      &--previous {
+        left: 40px;
+      }
+      &--next {
+        right: 40px;
+      }
+    }
+    &__day-names, &__week {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-column-gap: 4px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    &__month {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 30px;
+    }
+  }
+  .react-datepicker__year-read-view--down-arrow,
+  .react-datepicker__month-read-view--down-arrow,
+  .react-datepicker__month-year-read-view--down-arrow,
+  .react-datepicker__navigation-icon::before {
+    border-width: 2px 2px 0 0;
+  }
+}

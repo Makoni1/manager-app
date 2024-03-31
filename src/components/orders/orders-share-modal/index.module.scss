@@ -1,0 +1,95 @@
+@import "../../../assets/styles/var";
+.title {
+  color: $black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 139.023%; /* 27.805px */
+  margin-bottom: 22px;
+}
+.button {
+  width: 100%;
+  margin-top: 22px;
+  height: 70px;
+  background-color: $brand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: $white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.card {
+  margin-top: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $almost-white;
+  display: grid;
+  grid-template-columns: 22px 1fr 22px;
+  gap: 14px;
+  align-items: center;
+  min-height: 70px;
+  &_checkbox {
+    border-radius: 7px;
+    border: 1.6px solid $gray;
+    background-color: transparent;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background-color: $brand;
+      border-radius: 4px;
+    }
+    &_selected {
+      border-color: $brand;
+      &:before {
+        content: "";
+      }
+    }
+  }
+  &_input {
+    color: $dark-gray;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    border: 0;
+    background-color: transparent;
+  }
+  &_content {
+    h3 {
+      color: $black;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 8px;
+      span {
+        margin-left: 14px;
+        color: $dark-gray;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    p {
+      color: $black;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+  }
+  &_dropdown {
+    height: 100%;
+    button {
+      transform: translateY(-2px);
+    }
+  }
+}

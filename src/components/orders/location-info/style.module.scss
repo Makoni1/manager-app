@@ -1,0 +1,210 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $almost-white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  > img {
+    max-height: 27px;
+  }
+}
+.content {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  color: $black;
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  a {
+    color: $dark-gray;
+    font-size: 15px;
+    line-height: normal;
+  }
+  p {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.dropdown {
+  z-index: 500;
+  padding: 22px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  min-width: 400px;
+  @include forMobileView {
+    min-width: 100%;
+    padding: 22px 12px;
+  }
+  &_title {
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 139.023%; /* 22.244px */
+    margin-bottom: 16px;
+  }
+  &_content {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &_card {
+    margin-top: 8px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 12px;
+    border: 1.6px solid transparent;
+    padding: 15px 24px 15px 16px;
+    transition: 50ms border linear;
+    cursor: pointer;
+    @include forMobileView {
+      padding: 15px 16px;
+    }
+
+    &_selected, &:hover {
+      border-color: $light-accent;
+      > svg {
+        fill: #C5115E;
+      }
+    }
+
+    > svg {
+      min-width: 22px;
+    }
+
+    &_content {
+      margin-left: 12px;
+      h4 {
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 8px;
+      }
+      p {
+        color: $dark-gray;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &_button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px;
+    color: $black;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 12px;
+    border: 1.6px solid $light-gray;
+    background-color: $almost-white;
+  }
+}
+
+.modal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  @include forMobileView {
+    gap: 10px;
+  }
+  h3 {
+    color: $black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 110.523%; /* 26.525px */
+    margin-bottom: 22px;
+    @include forMobileView {
+      font-size: 20px;
+    }
+  }
+  &_button {
+    border-radius: 12px;
+    background-color: $brand;
+    padding: 5px 22px;
+    min-height: 56px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.7;
+      background-color: $dark-gray;
+    }
+  }
+}
+.locationGroup {
+  margin-top: 8px;
+  &_card {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1.6px solid $light-gray;
+    background-color: $almost-white;
+    cursor: pointer;
+    p {
+      color: $black;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    span {
+      margin-left: auto;
+      color: $dark-gray;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    &_open {
+      svg {
+        transform: scale(-1);
+      }
+    }
+  }
+  &_content {
+    opacity: 0;
+    pointer-events: none;
+    transition: 300ms all linear;
+    height: 0;
+    overflow: hidden;
+    &_display {
+      height: 100%;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

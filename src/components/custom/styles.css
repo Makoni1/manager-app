@@ -1,0 +1,16 @@
+.option-item {
+    padding: 16px 24px;
+    cursor: pointer;
+}
+
+.option-item:hover{
+    color: #A3195B;
+}
+
+input:hover {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}

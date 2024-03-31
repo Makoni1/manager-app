@@ -1,0 +1,101 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+.orders {
+  @include forTabletSmallView {
+    margin-bottom: 70px;
+  }
+}
+.wrapper {
+  padding: 6px 0;
+  margin-bottom: 14px;
+  position: relative;
+  &_pt {
+    padding-top: 30px;
+  }
+}
+.wrapperOptions {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  color: $black;
+  margin-bottom: 0;
+  @include forMobileView {
+    font-size: 20px;
+  }
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  padding: 5px 14px;
+  background-color: $brand;
+  border-radius: 12px;
+  color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  @include forTabletSmallView {
+   display: none;
+  }
+  &:hover {
+    color: $white;
+  }
+  svg {
+    margin-right: 10px;
+  }
+}
+.backBtn {
+  color: $dark-dark-gray;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 139.023%; /* 19.463px */
+  svg {
+    margin-right: 6px;
+  }
+  &_type2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $brand;
+  }
+}
+.mobile_order_btn {
+  display: none;
+  @include forTabletSmallView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 22px 115px;
+    position: fixed;
+    bottom: 20px;
+    border-radius: 12px;
+    background: var(--brand, #C5115E);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
+  }
+  @include forMobileView {
+    padding: 22px 90px;
+  }
+}
+.mobile_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile_create_btn{
+  color: $white;
+  font-family: $defaultFontFamily;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.badge {
+  margin-left: 5px;
+}

@@ -1,0 +1,26 @@
+.swiper {
+    height: 100%;
+    &-pagination {
+        padding: 0 60px;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1000px) {
+            padding: 0 12px;
+        }
+    }
+    &-pagination-bullet {
+        border-radius: 9px !important;
+        background: #fff !important;
+        flex-grow: 1;
+        height: 4px !important;
+        &:first-child {
+            margin-left: 0 !important;
+        }
+        &:last-child {
+            margin-right: 0 !important;
+        }
+        &-active {
+            background: #fff !important;
+        }
+    }
+}

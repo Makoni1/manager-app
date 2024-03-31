@@ -1,0 +1,47 @@
+@import "../../../assets/styles/mixins";
+.custom__button,
+.custom__button-gray,
+.custom__button-light,
+.custom__button-brand {
+  display: flex;
+  width: 251px;
+  height: 56px;
+  padding: 5px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 527;
+  line-height: normal;
+  text-align: center;
+  @include forMobileView {
+    width: 100%;
+  }
+}
+
+.custom__button {
+  background: var(--dark-dark-gray, #909195);
+  color: var(--white, #FFF);
+  border: none;
+  &_isMobile {
+    margin-top: 14px;
+  }
+}
+
+.custom__button-light {
+  border: 1.6px solid var(--light-gray, #ECEDEE);
+  background: var(--almost-white, #FAFAFA);
+  color: var(--black, #141619);
+}
+.custom__button-brand {
+  border-radius: 12px;
+  background: var(--brand, #C5115E);
+  color: #fff
+}
+.custom__button-gray {
+  border-radius: 12px;
+  background: var(--dark-dark-gray, #909195);
+  color: #fff;
+}

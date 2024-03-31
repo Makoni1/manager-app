@@ -1,0 +1,82 @@
+@import "../../../../assets/styles/var";
+.CustomDateTime-wrapper {
+  .react-datepicker {
+    border-radius: 12px;
+    border:0;
+    background-color: $white;
+    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.12);
+    font-family: Inter;
+    &-popper {
+      z-index: 500;
+    }
+    &__header {
+      border-bottom: 1.6px solid $light-gray;
+      background-color: $white;
+      padding: 16px 0 12px;
+    }
+    &__time-container {
+      width: 300px;
+    }
+    &__input-container > input {
+      padding: 0;
+      box-shadow: none;
+      font-size: 16px;
+    }
+    &__time {
+      margin: 0 10px;
+    }
+    &-time {
+      &__header {
+        color: $dark-gray;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    &__time-box {
+      width: 100% !important;
+    }
+    &__time-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 10px 0 !important;
+      padding-right: 3px;
+      grid-row-gap: 12px;
+      grid-column-gap: 6px;
+      //height: calc(195px + (1.7rem / 2));
+      overflow-y: hidden !important;
+      height: 300px !important;
+      &-item {
+        border-radius: 8px;
+        border: 1.6px solid $light-gray;
+        height: 49px !important;
+        padding: 12px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $black;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &:first-child,
+        &:last-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-last-child(2),
+        &:nth-last-child(3) {
+          display: none;
+        }
+        &--selected {
+          background-color: $brand !important;
+          border-color: $brand;
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+}

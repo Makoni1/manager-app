@@ -1,0 +1,14 @@
+@import "../../../assets/styles/mixins";
+
+.wrapper {
+  display: grid;
+  align-items: flex-start;
+  gap: 10px;
+}
+.column {
+  display: grid;
+  gap: 10px;
+}
+.hide {
+  display: none;
+}

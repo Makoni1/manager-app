@@ -1,0 +1,81 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+.wrapper {
+  margin-bottom: 8px;
+}
+.button {
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &_none {
+    display: none !important;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &_active {
+    background-color: $white;
+  }
+}
+.button:hover .icon, .button_active .icon {
+  &_1 {
+    display: none;
+  }
+  &_2 {
+    display: block;
+  }
+}
+.icon {
+  margin-right: 8px;
+  &_2 {
+    display: none;
+  }
+}
+.count {
+  margin-left: 8px;
+  color: $dark-gray;
+}
+.flex{
+  display: flex;
+}
+.statusTitle{
+  padding: 12px 16px;
+}
+.dropdownWrapper {
+  display: none;
+  @include forTabletView {
+    display: block;
+  }
+  @include forTabletSmallView {
+    position: relative;
+  }
+}
+.dropdownContent {
+  @include forTabletSmallView {
+    position: absolute;
+    background-color: #fff;
+    z-index: 3;
+    left: 90px;
+    width: 270px;
+    border-radius: 12px;
+  }
+}
+.mobile {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  @include forTabletView{
+    display: none;
+  }
+}
+.imgSelect {
+  margin-left: 8px;
+}

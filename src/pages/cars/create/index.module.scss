@@ -1,0 +1,116 @@
+@import "../../../assets/styles/var";
+
+.wrapper {
+  padding-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.title {
+  color: $black;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.buttonClose {
+  position: fixed;
+  top: 55px;
+  right: 20px;
+}
+.buttonCancel {
+  border-radius: 12px;
+  border: 1.6px solid $gray;
+  background: $almost-white;
+  width: 184px;
+  padding: 18px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.content {
+  border-radius: 12px;
+  border: 1.6px solid $gray;
+  background-color: $white;
+  padding: 42px 49px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  box-shadow: 0px 3px 20px 0px rgba(46, 47, 54, 0.12);
+}
+.field {
+  //position: relative;
+  //z-index: 0;
+  &_col_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  &_label {
+    color: $almost-black;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 12px;
+    display: block;
+  }
+  &_upload {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1.6px dashed $gray;
+    gap: 4px;
+    padding: 6px 10px;
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  input {
+    border-color: $almost-white;
+    background-color: $almost-white;
+  }
+}
+.button_upload {
+  border-radius: 12px;
+  background-color: $brand;
+  color: $white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  height: 60px;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}

@@ -1,0 +1,16 @@
+@import "../../../assets/styles/var";
+
+.wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.empty_text {
+  margin-top: 40px;
+  color: $dark-dark-gray;
+  text-align: center;
+  font-family: $defaultFontFamily;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 109.023%;
+}

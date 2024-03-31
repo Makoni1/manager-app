@@ -1,0 +1,17 @@
+@mixin forTabletView {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin forTabletSmallView {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin forMobileView {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

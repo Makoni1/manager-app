@@ -1,0 +1,22 @@
+@import "../../../assets/styles/var";
+.wrapper {
+
+}
+.content {
+  height: 0;
+  overflow: hidden;
+  transition: 50ms height linear;
+  display: grid;
+  &_open {
+    height: auto;
+  }
+}
+.button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: $almost-black;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 139.023%;
+}

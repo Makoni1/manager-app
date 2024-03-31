@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/var";
+
+.profile__password {
+  padding: 25px 20px 23px 20px;
+  border-radius: 12px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 2px 11px 0px rgba(12, 30, 44, 0.04);
+  &-hr {
+    margin-top: 16px;
+  }
+  &-title{
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &-subtitle{
+    display: block;
+    margin-top: 18px;
+    color: $black-title;
+    font-family: $defaultFontFamily;;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+  }
+
+}

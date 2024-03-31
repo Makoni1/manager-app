@@ -1,0 +1,160 @@
+@import "../../../src/assets/styles/var";
+
+.profile__page{
+  max-width: 540px;
+  margin: 0 auto;
+  &-title {
+    color: $black;
+    font-family: $defaultFontFamily;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+.profile__company {
+  border-radius: 12px;
+  background-color: $white;
+  box-shadow: 0px 2px 11px 0px rgba(12, 30, 44, 0.04);
+  padding: 24px 20px 27px 20px;
+  margin-bottom: 10px;
+  &-title{
+    color: var(--black, #141619);
+    font-family: $defaultFontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &-hr{
+    height: 1px;
+    background: $hr-gray;
+    margin-top: 16px;
+  }
+  &-camera {
+    z-index: 5;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    visibility:  hidden;
+  }
+  &-id {
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &-name {
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &-bin {
+  color: $dark-gray;
+  font-family: $defaultFontFamily;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+    background: lightgray 50% / cover no-repeat;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $light-blue;
+    }
+    &:hover svg, &_hover {
+      &:before {
+        content: "";
+      }
+      svg {
+        visibility: visible;
+      }
+    }
+  }
+  &-tick{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+  }
+  &-header{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+  }
+}
+.profile__contact {
+  &-title {
+    color: $dark-gray;
+    font-family: $defaultFontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+  }
+  &-subtitle {
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 12px;
+  }
+}
+.profile__upload-button {
+  margin-top: 6px;
+  padding: 16px 14px;
+  cursor: pointer;
+  font-family: $defaultFontFamily;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  box-shadow: 0px 2px 10px 0px rgba(16, 18, 28, 0.06);
+  color: $almost-black;
+  white-space: nowrap;
+  position: relative;
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+

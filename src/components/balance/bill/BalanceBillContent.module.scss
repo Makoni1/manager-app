@@ -1,0 +1,56 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+.balance__content {
+  display: flex;
+  gap: 12px;
+  @include forTabletSmallView {
+   flex-wrap: wrap;
+  }
+}
+.balance__item{
+  margin-right: 12px;
+}
+.balance__account {
+  width: 303px;
+  border-radius: 12px;
+  background-color: $white;
+  margin-bottom: 12px;
+  padding: 18px 18px;
+  @include forTabletSmallView {
+    width: auto;
+    flex-grow: 1;
+  }
+
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-title {
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 527;
+    line-height: normal;
+  }
+  &-bill{
+    color: $black;
+    font-family: $defaultFontFamily;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 18px;
+  }
+  &-quantity{
+    color: $dark-gray;
+    font-family: $defaultFontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 18px;
+  }
+}
+

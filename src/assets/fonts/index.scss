@@ -1,0 +1,59 @@
+$rootPath: "./";
+
+@font-face {
+  font-family: Gerbera;
+  src: url($rootPath + 'Gerbera-Regular.ttf');
+}
+
+@font-face {
+  font-family: Gerbera;
+  src: url($rootPath + 'Gerbera-Medium.ttf');
+}
+
+@font-face {
+  font-family: Gerbera-Bold;
+  src: url($rootPath + 'Gerbera-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-ExtraLight.ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url($rootPath + 'Inter-ExtraBold.ttf');
+  font-weight: 900;
+  font-style: normal;
+}

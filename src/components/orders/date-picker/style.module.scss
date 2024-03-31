@@ -1,0 +1,43 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+.wrapper {
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+
+  > *:not(:last-child) {
+    margin-right: 12px;
+    @include forMobileView {
+      margin-right: 0;
+    }
+  }
+}
+.editable {
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  padding: 10px 12px;
+
+  &:first-child {
+    min-width: 127px;
+    @include forMobileView {
+      width: 100%;
+      margin-bottom: 14px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px !important;
+    @include forMobileView {
+      margin-right: 0 !important;
+    }
+  }
+  @include forMobileView {
+    width: calc(50% - 7px);
+  }
+  > svg {
+    min-width: 18px;
+    margin-right: 8px;
+  }
+}

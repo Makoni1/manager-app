@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 6px 0;
+  margin-bottom: 14px;
+  position: relative;
+  &_pt {
+    padding-top: 30px;
+  }
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  color: $black;
+  margin-bottom: 0;
+  @include forMobileView {
+    font-size: 20px;
+  }
+}
+.wrapperOptions {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

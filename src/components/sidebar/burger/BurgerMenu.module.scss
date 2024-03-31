@@ -1,0 +1,21 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.hide {
+  display: none;
+}
+.burger {
+  position: fixed;
+  right: 14px;
+  top: 14px;
+  z-index: 50;
+  background-color: #252729;
+  filter: drop-shadow(0px 2px 16px rgba(16, 18, 28, 0.04));
+  width: 52px;
+  height: 52px;
+  border-radius: 30px;
+
+  @include forTabletSmallView {
+    display: block;
+  }
+}

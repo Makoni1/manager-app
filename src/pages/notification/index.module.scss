@@ -1,0 +1,109 @@
+@import "../../assets/styles/var";
+@import "../../assets/styles/mixins";
+
+.destination {
+  &_city {
+    color: $black-title;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 6px;
+    @include forTabletSmallView {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $black-title;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  &_status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @include forTabletView {
+      display: none;
+    }
+  }
+}
+.status {
+  &_from {
+    padding: 8px 10px;
+    border-radius: 44px;
+    background: $yellow;
+    color: $black-title;
+  }
+  &_to {
+    padding: 8px 10px;
+    border-radius: 44px;
+    background: $blue;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_arrow {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+.writer {
+  color: $black-title;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 6px;
+  white-space: nowrap;
+  @include forTabletSmallView {
+    color: $black-title;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.comment {
+  color: $black-title;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include forTabletSmallView {
+    color: $black-title;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.date {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.markReadButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+

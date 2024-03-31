@@ -1,0 +1,178 @@
+@import "../../../src/assets/styles/var";
+@import "../../../src/assets/styles/mixins";
+.createOrderContainer {
+  border-radius: 12px;
+  background-color: $white;
+  padding: 30px 22px 22px 22px;
+  width: 100%;
+  position: relative;
+}
+.createOrderButton{
+  margin-left: 62px;
+  @media (max-width: 1500px) {
+    margin-left: 62px;
+  }
+  @include forMobileView {
+    margin-left: 0;
+  }
+
+  &_withMargin {
+    margin-top: -26px;
+    @media (max-width: 1500px) {
+      margin-top: -10px;
+    }
+  }
+}
+.createOrder{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1500px) {
+    flex-wrap: wrap;
+  }
+  @include forMobileView {
+    flex-direction: column;
+    padding: 20px 16px;
+  }
+  &_withSteps, &_isMobile {
+    flex-direction: column;
+  }
+  &_gray {
+    filter: grayscale(1);
+  }
+  &__logo {
+    flex: 0 0 auto;
+    @include forMobileView {
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
+  }
+  &__content {
+    flex: 1;
+    //@media (max-width: 1500px) {
+    //  text-align: center; /* Выравниваем содержимое по центру */
+    //  padding: 0 20px; /* Добавляем отступы по бокам для контента */
+    //}
+    @include forMobileView {
+      text-align: left; /* Восстанавливаем исходное выравнивание текста для .createOrder__content */
+      padding: 0;
+    }
+    &_isMobile {
+      > div:first-child {
+        padding: 0 20px;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    width: 251px;
+    height: 56px;
+    padding: 5px 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: $dark-dark-gray;
+    color: $white;
+    font-family: $defaultFontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__title {
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 14px;
+    @include forMobileView {
+      text-align: center;
+    }
+  }
+  &__subtitle{
+    color: $almost-black;
+    font-family: $defaultFontFamily;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+  &__amount{
+    flex: 0 0 auto;
+    text-align: right;
+    color: $black-title;
+    font-family: $defaultFontFamily;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    //@media (max-width: 1500px) {
+    //  text-align: left;
+    //}
+    @include forMobileView {
+      text-align: left;
+      font-size: 18px;
+    }
+
+    &_isMobile {
+      display: grid;
+      grid-template-columns: 1fr 50px;
+      grid-template-areas:
+            "price price input"
+            "text1 text1 input"
+            "text2 text2 input"
+            "text3 text3 text3";
+      gap: 10px;
+    }
+
+    &-button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    &-count {
+      width: 112px;
+      height: 43px;
+      background-color: $almost-white;
+      border: 1.4px solid $light-gray;
+      border-radius: 15px;
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 12px;
+      @include forMobileView {
+        width: 100px;
+        grid-area: input;
+      }
+    }
+    &-subtitle{
+      color: $dark-dark-gray;
+      text-align: right;
+      font-family: $defaultFontFamily;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 445;
+      margin-bottom: 14px;
+      @include forMobileView {
+        grid-area: text2;
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      &_discount {
+        @include forMobileView {
+          grid-area: text3;
+        }
+      }
+    }
+    &-total {
+      margin-bottom: 14px;
+      @include forMobileView {
+        grid-area: text1;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

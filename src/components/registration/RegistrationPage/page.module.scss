@@ -1,0 +1,152 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.registration {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $almost-black;
+    flex-grow: 1;
+    & > * {
+        width: 50%;
+        min-height: calc(100vh - 16px);
+        @include forTabletSmallView {
+            width: 100%;
+        }
+    }
+    @include forTabletSmallView {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        background-color: #F4F4F4;
+    }
+}
+.wrapper {
+    padding: 80px 10px 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include forTabletSmallView {
+        padding: 20px 10px 15px;
+    }
+}
+.logo {
+    position: absolute;
+    top: 24px;
+    @media screen and (max-width: 1600px) {
+        top: 0;
+    }
+    @include forTabletSmallView {
+        position: revert;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    img {
+        height: 40px;
+
+    }
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include forTabletSmallView {
+        width: 80%;
+    }
+    @include forMobileView {
+        width: 70%;
+    }
+}
+.header {
+    text-align: center;
+    margin-bottom: 46px;
+    @media screen and (max-width: 1600px) {
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 16px;
+    }
+
+    @include forTabletSmallView {
+        margin-bottom: 16px;
+    }
+    h1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 22px;
+        color: $black;
+        @media screen and (max-width: 1600px) {
+            margin-bottom: 18px;
+        }
+
+        @include forTabletSmallView {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+    p {
+        line-height: 134%;
+        margin-bottom: 0;
+    }
+}
+.slider {
+    @include forTabletSmallView {
+        display: none;
+    }
+}
+.content {
+    max-width: 440px;
+    width: 100%;
+
+}
+.footer {
+    text-align: center;
+    font-style: normal;
+    color: $light-gray-footer;
+    margin-top: 16px;
+    @media screen and (max-width: 1600px) {
+        margin-top: 45px;
+    }
+
+    @include forTabletSmallView {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    a {
+        color: $almost-black;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        border: 1px solid $light-gray;
+        padding: 10px 20px;
+        min-width: 140px;
+        border-radius: 8px;
+        transition: 200ms linear;
+
+        @include forTabletSmallView {
+            min-width: 250px;
+            padding: 15px 10px;
+            margin-top: 10px;
+            background-color: $white;
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $brand;
+            border-color: $brand;
+        }
+    }
+}

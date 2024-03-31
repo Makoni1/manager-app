@@ -1,0 +1,43 @@
+@import "../../../assets/styles/var";
+
+.pagination {
+  gap: 5px;
+  &_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    color: $dark-gray;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px !important;
+    border: 1.6px solid transparent;
+    background-color: transparent;
+    outline-color: $gray;
+    box-shadow: none !important;
+    &:hover, &:focus {
+      border-color: $gray;
+      background-color: $almost-white;
+      color: $black;
+      path {
+        stroke: $black;
+      }
+    }
+  }
+  &_arrow {
+    padding: 0;
+    border-color: $gray;
+    background-color: $almost-white;
+  }
+  &_active {
+    border-color: $gray;
+    background-color: $almost-white;
+    color: $black;
+  }
+  &_disabled {
+    pointer-events: none;
+  }
+}

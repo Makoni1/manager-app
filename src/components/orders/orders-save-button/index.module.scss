@@ -1,0 +1,14 @@
+@import "../../../assets/styles/var";
+
+.wrapper {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+.text {
+  margin-left: 10px;
+  color: $dark-gray;
+}

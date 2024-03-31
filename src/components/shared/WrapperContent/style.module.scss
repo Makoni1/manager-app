@@ -1,0 +1,39 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+
+.orders {
+  @include forTabletSmallView {
+    margin-bottom: 70px;
+  }
+}
+.mobile_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile_order_btn {
+  display: none;
+  @include forTabletSmallView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 22px 115px;
+    position: fixed;
+    bottom: 20px;
+    border-radius: 12px;
+    background: var(--brand, #C5115E);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
+  }
+  @include forMobileView {
+    padding: 22px 90px;
+  }
+}
+.mobile_create_btn{
+  color: $white;
+  font-family: $defaultFontFamily;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

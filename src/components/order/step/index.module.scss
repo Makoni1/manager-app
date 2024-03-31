@@ -1,0 +1,80 @@
+@import "../../../assets/styles/var";
+@import "../../../assets/styles/mixins";
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 0;
+}
+.step {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  color: $black;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 20px;
+  position: relative;
+  z-index: 0;
+  &::before, &::after {
+    position: absolute;
+    top: calc(50% + 1.5px);
+    transform: translateY(-50%);
+    width: calc(100vw / 3);
+    @include forMobileView {
+      width: calc(100vw / 4.5);
+    }
+  }
+  &::before {
+    right: calc(100% + 1.5px);
+    background-color: $green;
+    height: 3px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    left: calc(100% + 1.5px);
+    background-color: $light-gray;
+    height: 3.5px;
+  }
+  &_current {
+    &::before {
+      content: "";
+    }
+  }
+  &_active {
+    border-color: $green;
+    background-color: $green;
+    color: $white;
+    z-index: 1;
+    &::after {
+      content: unset;
+    }
+  }
+}
+.stepLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: $light-gray;
+  z-index: -1;
+  &_progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 250ms linear width;
+    background-color: $green;
+    width: 50%;
+  }
+}

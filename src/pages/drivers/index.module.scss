@@ -1,0 +1,37 @@
+@import "../../assets/styles/var";
+
+.button {
+  border-radius: 12px;
+  border: 1.6px solid $light-gray;
+  background-color: $white;
+  display: inline-flex;
+  align-items: center;
+  height: 54px;
+  padding: 5px 20px;
+  gap: 10px;
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 6px 0 0;
+}
+.itemsSort {
+  margin: 26px 0;
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.dropdown {
+  &_selected {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

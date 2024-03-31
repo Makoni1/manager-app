@@ -1,0 +1,58 @@
+@import "../../../assets/styles/var";
+.content {
+  //overflow-x: auto;
+  width: 100%;
+  //&_scroll {
+  //  min-width: 1560px;
+  //}
+}
+.clearBtnFilter {
+  color: $black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+.saveBtnFilter {
+  color: $black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 8px;
+  }
+}
+.itemsSort {
+  margin: 26px 0;
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.savedFilters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.savedFilter {
+  border-radius: 44px;
+  border: 1.6px solid $light-gray;
+  background: $almost-white;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dropdown {
+  &_selected {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

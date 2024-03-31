@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 100vh;
+}
+.content {
+  padding: 20px 12px;
+  min-height: 100vh;
+  flex: 1;
+  width: calc(100% - 66px);
+}
+.display{
+  display: block !important;
+}
+.hide {
+  display: none;
+}
